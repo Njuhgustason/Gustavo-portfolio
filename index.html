@@ -11,8 +11,19 @@
 </head>
 <body>
   <header>
-    <div class="menu-toggle" id="menu-toggle"><span></span>
-  ☰
+    <div class="menu-toggle" 
+    onclick="menu-toggle()">
+    <span></span>
+    <span></span>
+    <span></span>
+    <nav class="nav-link" id="navMenu">
+    </nav>
+  <script>
+    function toggleMenu() {
+
+      document.getElementById("navMenu").classlist.toggle("active");
+    }
+  </script>
 </div>
 
     <div class="logo">CoreNest<span>Technologies</span></div>
@@ -32,21 +43,21 @@
       <p>Hi, I'm a Computer Engineering student at CHITECHMA. I create websites, apps & graphic designs that elevate brands and ideas.</p>
     </div>
     <div class="hero-img">
-      <img src="g.jpg" height="50%" width="50%" "Profile Picture">
+      <img src="g.jpg" height="60%" width="60%" alt="Profile Picture">
     </div>
   </section>
   <section id="services">
   <h2>My Services</h2>
   <div class="services-grid">
-    <div class="service-card">
+    <div class="service-card fade-in">
       <h3>🌐 Web Development</h3>
       <p>Custom websites built with clean code, responsive design, and fast performance.</p>
     </div>
-    <div class="service-card ">
+    <div class="service-card fade-in">
       <h3>📱 App Development</h3>
       <p>Cross-platform mobile apps that deliver intuitive UX and high functionality.</p>
     </div>
-    <div class="service-card">
+    <div class="service-card fade-in">
       <h3>🎨 Graphic Design</h3>
       <p>Modern and professional visuals, logos, and marketing material tailored to your brand.</p>
     </div>
@@ -56,7 +67,7 @@
 <section class="hire-me-section">
   <h2>Ready to Start a Project?</h2>
   <p>Click below to connect with me instantly on WhatsApp!</p>
-  <a href="https://wa.me/+237 677613968" target="_blank" class="hire-btn-whatsapp">💬 Hire Me on WhatsApp</a>
+  <a href="https://wa.me/+237677613968" target="_blank" class="hire-btn-whatsapp">💬 Hire Me</a>
 </section>
 
 
@@ -166,7 +177,7 @@
     <div class=form action="https://formspree.io/f/mblyrqlj"method="POST">
 "
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required placeholder="you@example.com">
+      <input type="email" id="email" name="email" required placeholder="you@DEmail.com">
     </div>
 
     <div class="form-group">
@@ -180,23 +191,26 @@
 </section>
 
 <div class="social-icons">
-  <a href="https://facebook.com/YOUR_USERNAME" target="_blank" aria-label="Facebook">
+  <a href="https://facebook.com/Gustafson mueghe" target="_blank" aria-label="Facebook">
     <i class="fa-brands fa-facebook"></i>
   </a>
-  <a href="https://wa.me/YOUR_NUMBER" target="_blank" aria-label="WhatsApp">
+  <a href="https://wa.me/+237677613968" target="_blank" aria-label="WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
-  <a href="https://tiktok.com/@YOUR_USERNAME" target="_blank" aria-label="TikTok">
+  <a href="https://tiktok.com/@Senior.gustavo" target="_blank" aria-label="TikTok">
     <i class="fa-brands fa-tiktok"></i>
   </a>
-  <a href="https://youtube.com/@YOUR_CHANNEL" target="_blank" aria-label="YouTube">
+  <a href="https://youtube.com/@Gustavo Mueghe" target="_blank" aria-label="YouTube">
     <i class="fa-brands fa-youtube"></i>
   </a>
 </div>
 
 
   <footer>
-    <p>© 2025 CoreNest Technologies. All rights reserved.</p>
+    <p>© 2025 Gustafson portfolio. All rights reserved.
+      <br>
+      Powered by CoreNest Technologies
+    </p>
   </footer>
 </body>
 </html>
