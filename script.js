@@ -88,12 +88,7 @@ serviceElements.forEach(el => {
 
 
 const toggleBtn = document.getElementById('menu-toggle');
-const navMenu = document.querySelector('nav ul');
-
-toggleBtn.addEventListener('click', () => {
-  navMenu.classList.toggle('show');
-  const toggleBtn = document.getElementById('menu-toggle');
-const navMenu = document.querySelector('nav ul');
+const navMenu = document.getElementById('navLinks');
 const body = document.body;
 
 toggleBtn.addEventListener('click', () => {
@@ -102,16 +97,6 @@ toggleBtn.addEventListener('click', () => {
   body.classList.toggle('lock-scroll');
 });
 
-// Auto-close nav when a link is clicked
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    toggleBtn.classList.remove('active');
-    navMenu.classList.remove('show');
-    body.classList.remove('lock-scroll');
-  });
-});
-
-});
 
 
 const whyCards = document.querySelectorAll('.fade-in-why');
@@ -129,6 +114,18 @@ const whyObserver = new IntersectionObserver((entries) => {
 
 whyCards.forEach(el => {
   whyObserver.observe(el);
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  if (toggle && navLinks) {
+    toggle.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
+  }
 });
 
 

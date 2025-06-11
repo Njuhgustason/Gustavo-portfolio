@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'arial', sans-serif;
   color: var(--dark);
   background-color: var(--light);
   line-height: 1.6;
@@ -114,6 +114,7 @@ footer {
   color: var(--white);
   text-align: center;
   padding: 20px;
+  background-color: #1ebe5b;
 }
 
 @media (max-width: 768px) {
@@ -275,26 +276,58 @@ button[type="submit"] {
   }
 }
 
+
+  
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1e90ff;
+}
+
 .menu-toggle {
   display: none;
-  font-size: 2rem;
+  background: none;
+  border: none;
   cursor: pointer;
-  user-select: none;
   position: relative;
   width: 30px;
   height: 25px;
 }
 
+.menu-toggle span,
 .menu-toggle::before,
-.menu-toggle::after,
-.menu-toggle span {
+.menu-toggle::after {
   content: "";
-  background: var(--green);
-  height: 3px;
-  width: 100%;
+  background: green;
   position: absolute;
+  width: 100%;
+  height: 3px;
   transition: 0.3s ease;
-  left: 0;
 }
 
 .menu-toggle span {
@@ -309,52 +342,36 @@ button[type="submit"] {
   bottom: 0;
 }
 
-.menu-toggle.active::before {
-  transform: rotate(45deg);
-  top: 11px;
-}
-
-.menu-toggle.active span {
-  opacity: 0;
-}
-
-.menu-toggle.active::after {
-  transform: rotate(-45deg);
-  bottom: 11px;
-}
-
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
-  .nav-link {
+
+  .nav-links {
     display: none;
-  }
-  .nav-link.active{
-    display: block;
-  }
-  nav ul {
-    max-height: 0;
-    overflow: hidden;
     flex-direction: column;
-    width: 100%;
-    background: white;
-    transition: max-height 0.4s ease;
+    background:green;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100px;
+    z-index: 99;
+    padding: 1em;
   }
 
-  nav ul.show {
-    max-height: 500px;
-  }
-
-  nav ul li {
-    padding: 10px 20px;
-    border-top: 1px solid #eee;
-  }
-
-  body.lock-scroll {
-    overflow: hidden;
+  .nav-links.show {
+    display: flex;
   }
 }
+
+/* Extra: prevent scrolling on mobile menu open */
+.lock-scroll {
+  overflow: hidden;
+}
+
+
+
+
 
 #services {
   padding: 60px 40px;
@@ -613,5 +630,8 @@ button[type="submit"] {
 .social-icons a[aria-label="YouTube"] {
   background-color: #FF0000;
 }
+
+
+
 
 
